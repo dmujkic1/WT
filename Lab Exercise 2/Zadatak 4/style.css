@@ -1,0 +1,28 @@
+body{
+    background-color: yellow;
+}
+
+th{
+    background-color: gray;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+td{
+    background-color: yellow;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.tabela{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    text-align: center;
+    width: 80%;
+    border-collapse: collapse;
+}

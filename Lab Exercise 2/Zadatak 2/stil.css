@@ -1,0 +1,68 @@
+@import url(http://fonts.googleapis.com/css?family=Gabriela);
+
+body{
+    background-color: #a7a09a;
+}
+
+#okvir{
+    background-color: #99c;
+    width: 750px;
+    margin: 20%;
+    margin-top: 0%;
+}
+
+#zaglavlje{
+    background-color: #ddd;
+}
+
+h1{
+    color: green;
+    font-size: 42pt;
+    font-family: 'Gabriela', serif;
+    padding: 1%;
+    margin: 0%;
+}
+
+#meni{
+    background-color: #c99;
+    padding: 0%;
+    text-align: left;
+}
+
+#meni ul {
+    list-style-type: none;
+    padding: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.6%;
+    margin: 0;
+}
+
+#meni li{
+    display: inline;
+    margin: 2px;
+}
+
+#glavni{
+    background-color: #9c9;
+    padding-left: 10px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    float: left;
+    width: 65%;
+    box-sizing: border-box;
+}
+
+#desno{
+    background-color: #c9c;
+    float: right;
+    padding-left: 10px;
+    width: 35%;
+    box-sizing: border-box;
+}
+
+#podnozje{
+    background-color: #cc9;
+    clear: both;
+    padding-left: 1%;
+    height: 5%;
+}

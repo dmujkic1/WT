@@ -1,0 +1,22 @@
+html {
+    background-color: cyan;
+}
+
+p {
+    color: black;
+    clear: left;
+}
+
+#p1 {
+    margin-left: 5%;
+    margin-bottom: 35px;
+}
+
+#naslov{
+    font-style: bold;
+    text-align:center;
+}
+
+#slika{
+    float: left;
+}
