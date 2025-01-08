@@ -1,0 +1,26 @@
+th,tr,td{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+th{
+    background-color: #CCCCCC;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+tr:nth-child(even){
+    background-color: white;
+}
+
+tr:nth-child(odd){
+    background-color: #FFF2CC;
+}
+
+table{
+    text-align: center;
+    border-collapse: collapse;
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: sans-serif;
+}
