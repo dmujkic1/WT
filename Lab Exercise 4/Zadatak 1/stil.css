@@ -1,0 +1,12 @@
+/* Podrazumijevano stanje podstabla */
+.podstablo {
+    display: none;
+    margin-left: 20px;
+}
+
+/* Stil za element koji se može kliknuti */
+.toggle {
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none; /* Ukidanje mogucnosti selektovanja teksta  */
+}
