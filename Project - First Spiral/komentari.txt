@@ -1,0 +1,24 @@
+Spirala1:
+1.)
+Pros: lahko čitljiv i uredan kod
+Cons: nedostatak slika tj. ikonica
+Belaji: n/a
+Dileme: n/a
+
+2.)
+Pros: minimalne izmjene koda za pretvorbu grida u flex
+Cons: n/a
+Belaji: n/a
+Dileme: n/a
+
+3.)
+Pros: zanimljiv i edukativan zadatak, a ne pretezak, naucio nas (koji nemamo pojma o css prije WT) da mozemo @media koristiti za razlicite prikaze
+Cons: n/a
+Belaji: uredio sam #osnovno img prvenstveno jer je slika ispadala iz okvira pri malim rezolucijama, sada to nije problem! (iako nije naglaseno u postavci spirale)
+Dileme: mnogo dilema izmedju sirine slike, stavio sam max-width:600px jer mi je cudno bilo kada bude 100%, pa odzumiram a slika i dalje ogromna.
+
+4.)
+Pros: zadatak rijesen seljackom metodom pojedinacnog postavljanja svakog elementa glavnog containera (s tim da sam morao poseban atribut dodati za posljednje dvije visoke vijesti, ali iskljucivo samo njima, saznato trial and error metodom)
+Cons: mnogo patnje i boli izazvano ovim zadatkom (procentualno najvise vremena oduzeo ubjedljivo)
+Belaji: finese oko aspect/ratio pravile problem, borderi nisu htjeli surađivati itd.
+Dileme: razmisljao sam da li da uredjujem zadatak naknadno van granica postavke spirale, ali sam se sjetio da se to ne trazi od nas a imam i druge predmete i projekte...Na vijesti.html na sirini ispod 410px otprilike odsjece se navbar postepeno (sve se vise krati kako se ekran suzava ispod 410px, ali ne normalno kao na ostalim stranicama)
