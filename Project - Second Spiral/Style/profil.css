@@ -1,0 +1,54 @@
+body {
+    background-color: #fdf1d3;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+iframe {
+    border: none; 
+    width: 100%;
+    height: auto;
+}
+
+.user-profil {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #6d675a;
+    border: 2px solid #8a8a8a;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 0fr 1fr 1fr;
+}
+
+@media screen and (max-width: 500px) {
+    .user-profil {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 25px;
+        background-color: #6d675a;
+        border: 2px solid #8a8a8a;
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.user-slika {
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+.user-profil p {
+    margin: 5px;
+    margin-bottom: 21px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 85%;
+    padding: 5px;
+    margin: 5px;
+    margin-right: 25px;
+}

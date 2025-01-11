@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="bs-BA">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="../Style/test.css">
+    <script src="../Scripts/SpisakNekretnina.js"></script>
+    <script src="../Scripts/nekretnine.js"></script>
+    <script src="../Scripts/StatistikaNekretnina.js"></script>
+</head>
+
+<body>
+    <iframe src="meni.html"></iframe>
+    <div id="stan"></div>
+    <div id="kuca"></div>
+    <div id="pp"></div>
+    <div id="result"></div>
+
+    <script>
+        // Pokreni init funkciju da inicijalizuješ nekretnine
+        StatistikaNekretnina.init();
+
+        // Testiraj funkciju prosječna kvadratura
+        const kriterijKvadratura = { tip_nekretnine: "Kuća" };
+        const avgKvadratura = StatistikaNekretnina.prosjecnaKvadratura(kriterijKvadratura);
+        console.log('Prosječna kvadratura:', avgKvadratura);
+
+        // Testiraj histogram cijena
+        const periodi = [{ od: 2000, do: 2010 }, { od: 2010, do: 2024 }];
+        const rasponi = [{ od: 10000, do: 150000 }, { od: 150000, do: 1000000 }];
+        const histogram = StatistikaNekretnina.histogramCijena(periodi, rasponi);
+        console.log("Histogram cijena:", histogram);
+
+        // Outlier nekretnina
+        const kriterijOutlier = { tip_nekretnine: "Stan" }
+        const nazivSvojstva = "cijena";
+        const outlier = StatistikaNekretnina.outlier(kriterijOutlier, nazivSvojstva);
+        console.log("Najveći outlier:", outlier);
+
+        // Moje nekretnine
+        const korisnikId = 1;
+        const mojeNekretnine = StatistikaNekretnina.mojeNekretnine(korisnikId);
+        console.log("Moje nekretnine:", mojeNekretnine);
+
+        // Prikaz rezultata u HTML-u
+        document.getElementById("result").innerHTML = `
+        <p>Prosječna kvadratura: ${avgKvadratura}</p>
+        <p>Histogram cijena: ${JSON.stringify(histogram)}</p>
+        <p>Outlier: ${JSON.stringify(outlier)}</p>
+        <p>Nazivi mojih nekretnina: ${mojeNekretnine.map(n => n.naziv).join(", ")}</p>
+        `;
+    </script>
+
+</body>
+</html>
