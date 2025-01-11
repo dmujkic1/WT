@@ -1,0 +1,216 @@
+detalji.js
+window.appData = {
+    glavniElement: null,
+    sviElementi: Object.freeze([]),
+    carousel: null,
+    lijevoDugmeListener: null,
+    desnoDugmeListener: null,
+};
+
+window.onload = function () {
+    const glavniElement = document.querySelector('#upiti'); // Div koji sadrži sve upite
+    const sviElementi = Array.from(document.querySelectorAll('#upiti .upit')); // Svi upiti
+
+    function inicijalizirajCarouselAkoJePotrebno() {
+        const glavniElement = document.querySelector('#upiti');
+        let carouselNavigation = document.querySelector("#carousel-navigation");
+        if (!glavniElement) return;
+    
+        if (window.innerWidth <= 599) {
+            if (!window.appData.glavniElement) window.appData.glavniElement = glavniElement;
+            if (window.appData.sviElementi.length === 0) {
+                window.appData.sviElementi = Array.from(glavniElement.querySelectorAll('.upit'));
+            }
+    
+            // Inicijalizacija carousela
+            if (!window.appData.carousel) {
+                window.appData.carousel = postaviCarousel(glavniElement, window.appData.sviElementi);
+                console.log("Carousel inicijalizovan:", window.appData.carousel);
+            }
+    
+            // Provjera i premještanje `carousel-navigation` unutar `glavniElement` ako nije već tamo
+            if (!carouselNavigation) {
+                // Ako carouselNavigation ne postoji, kreiraj ga
+                carouselNavigation = document.createElement('div');
+                carouselNavigation.id = "carousel-navigation";
+                const lijevoDugme = document.createElement('button');
+                lijevoDugme.innerText = '< Previous';
+                const desnoDugme = document.createElement('button');
+                desnoDugme.innerText = 'Next >';
+                carouselNavigation.appendChild(lijevoDugme);
+                carouselNavigation.appendChild(desnoDugme);
+            }
+    
+            if (!glavniElement.contains(carouselNavigation)) {
+                glavniElement.appendChild(carouselNavigation);
+            }
+    
+            // Postavljanje event listenera za dugmadi
+            const lijevoDugme = carouselNavigation.querySelector("button:nth-child(1)");
+            const desnoDugme = carouselNavigation.querySelector("button:nth-child(2)");
+    
+            // Ukloni prethodne event listenere
+            lijevoDugme?.removeEventListener("click", window.appData.lijevoDugmeListener);
+            desnoDugme?.removeEventListener("click", window.appData.desnoDugmeListener);
+    
+            // Dodaj nove event listenere
+            window.appData.lijevoDugmeListener = function () {
+                console.log("Lijevo dugme kliknuto!");
+                window.appData.carousel.fnLijevo();
+            };
+            window.appData.desnoDugmeListener = function () {
+                console.log("Desno dugme kliknuto!");
+                window.appData.carousel.fnDesno();
+            };
+    
+            lijevoDugme?.addEventListener("click", window.appData.lijevoDugmeListener);
+            desnoDugme?.addEventListener("click", window.appData.desnoDugmeListener);
+        } else {
+            // Resetovanje na širim ekranima
+            if (window.appData.sviElementi.length > 0) {
+                const sviElementiHTML = window.appData.sviElementi.map(el => el.outerHTML).join('');
+                if (glavniElement.innerHTML !== sviElementiHTML) {
+                    glavniElement.innerHTML = ''; // Očistiti sadržaj
+                    window.appData.sviElementi.forEach(el => glavniElement.appendChild(el)); // Dodati sve elemente
+                }
+            }
+    
+            // Uklanjanje carousela
+            if (window.appData.carousel) {
+                window.appData.carousel = null;
+                console.log("Carousel uklonjen.");
+            }
+    
+            // Uklanjanje event listenera
+            if (carouselNavigation) {
+                const lijevoDugme = carouselNavigation.querySelector("button:nth-child(1)");
+                const desnoDugme = carouselNavigation.querySelector("button:nth-child(2)");
+    
+                lijevoDugme?.removeEventListener("click", window.appData.lijevoDugmeListener);
+                desnoDugme?.removeEventListener("click", window.appData.desnoDugmeListener);
+    
+                window.appData.lijevoDugmeListener = null;
+                window.appData.desnoDugmeListener = null;
+    
+                // Premještanje navigacije izvan `glavniElement`
+                if (carouselNavigation.parentElement === glavniElement) {
+                    document.body.appendChild(carouselNavigation);
+                }
+            }
+        }
+    }
+
+    // Inicijalizacija carousela odmah nakon učitavanja stranice
+    inicijalizirajCarouselAkoJePotrebno();
+
+    // Dodavanje event listener-a za promenu veličine ekrana
+    window.addEventListener("resize", () => {
+        inicijalizirajCarouselAkoJePotrebno();
+    });
+};
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+carousel.js
+function postaviCarousel(glavniElement, sviElementi, indeks=0){
+    if (!glavniElement || !sviElementi || sviElementi.length === 0 || indeks < 0 || indeks >= sviElementi.length) return null;
+
+    function prikaziElement() {
+        const navigation = glavniElement.querySelector('#carousel-navigation');
+        glavniElement.innerHTML = sviElementi[indeks].outerHTML; // Prikaži trenutni element
+        if (navigation) glavniElement.appendChild(navigation); // Ponovo dodaj navigaciju
+    }
+    
+
+    function fnLijevo() {
+        indeks--;
+        if (indeks<0) indeks=sviElementi.length-1;
+        prikaziElement();
+    }
+
+    function fnDesno() {
+        indeks++;
+        if (indeks>=sviElementi.length) indeks=0;
+        prikaziElement();
+    }
+
+    prikaziElement();
+    return {fnLijevo:fnLijevo, fnDesno:fnDesno};
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+detalji.html
+<!DOCTYPE html>
+<html lang="bs-BA">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalji</title>
+    <link rel="stylesheet" type="text/css" href="../Style/detalji.css">
+    <script src="../Scripts/carousel.js"></script>
+    <script src="../Scripts/detalji.js"></script>
+</head>
+
+<body>
+    <iframe src="meni.html"></iframe>
+
+    <div id="osnovno">
+        <img src="../Resources/stan/stan1.jpg" alt="Nekretnina">
+        <p><strong>Naziv:</strong> Useljiv stan sarajevo</p>
+        <p><strong>Kvadratura:</strong> 58 m²</p>
+        <p><strong>Cijena:</strong> 232,000 KM</p>
+    </div>
+
+    <h3>DETALJI</h3>
+    <div id="detalji">
+        <div id="kolona1">
+            <p><strong>Tip grijanja:</strong> plin</p>
+            <p><strong>Lokacija:</strong> Novo Sarajevo</p>
+        </div>
+        <div id="kolona2">
+            <p><strong>Godina izgradnje:</strong> 2019</p>
+            <p><strong>Datum objave oglasa:</strong> 2022</p>
+        </div>
+        <div id="opis">
+            <p><strong>Opis:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore dignissimos eos
+                tempore, mollitia doloribus vitae molestiae ullam ut repudiandae alias corrupti, rem nisi officia at
+                perferendis dolorum iusto dolores nobis!</p>
+        </div>
+    </div>
+
+
+    <h3>UPITI</h3>
+    <div id="upiti">
+        
+        <div class="upit">
+            <p><strong>Username 1:</strong></p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolore perferendis dolor, aperiam
+                voluptatibus neque explicabo qui, quam, illo suscipit sint quo officia dolores consequatur voluptatem.
+                Laborum dolor at placeat!(1)</p>
+        </div>
+        <div class="upit">
+            <p><strong>Username 2:</strong></p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolore perferendis dolor, aperiam
+                voluptatibus neque explicabo qui, quam, illo suscipit sint quo officia dolores consequatur voluptatem.
+                Laborum dolor at placeat!(2)</p>
+        </div>
+        <div id="carousel-navigation">
+            <button>&lt; Previous</button>
+            <button>Next &gt;</button>
+        </div>
+        
+    </div>
+    <!-- <div id="carousel-navigation">
+        <button>&lt; Previous</button>
+        <button>Next &gt;</button>
+    </div> -->
+
+</body>
+
+</html>
