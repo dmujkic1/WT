@@ -1,0 +1,118 @@
+body {
+  background-color: #fdf1d3;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body h3 {
+  margin-left: 20px;
+}
+
+iframe {
+  border: none; 
+  width: 100%;
+  height: auto;
+}
+
+#osnovno {
+  text-align: left;
+  border: 1px solid #000;
+  padding: 20px;
+  margin: 20px;
+}
+
+#osnovno img {
+  max-width: 600px; /* u dilemi sam bio da li da stavim 100% da se razvuce na velikim ekranima ali mi subjektivno cudno izgleda kada odzumiram, a slika opet ogromna */
+  height: auto;
+  object-fit: cover; /* Prevencija da ne ispada slika iz okvira pri izuzetno malim rezolucijama */
+  width: 100%;
+  height: auto;
+}
+
+#detalji {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  border: 1px solid #000;
+  padding: 20px;
+  margin: 20px;
+}
+
+#kolona1 {
+  order: 1;
+  flex: 1 1 auto;
+  align-self: auto;
+}
+
+#kolona2 {
+  order: 2;
+  flex: 1 1 auto;
+  align-self: auto;
+}
+
+#opis {
+  order: 2;
+  flex: 0 1 100%;
+  align-self: auto;
+}
+
+#upiti {
+  border: 1px solid #000;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.upit {
+  border: 1px solid #000;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  width: 100%;
+}
+
+/* Ekrani širi od 800px - po dva upita u redu */
+/* @media (min-width: 801px) {
+  .upit {
+    width: 45%;  *//* ne moze preko 45% jer ne uzimamo u obzir margine i paddinge --> ne mozemo samo reci 50% */
+/*   }
+  #carousel-navigation{
+    display:none;
+  }
+} */
+
+/* Ekrani između 600px i 800px - po jedan upit u redu */
+/* @media (min-width: 600px) and (max-width: 800px) {
+  .upit {
+    width: 100%;
+  }
+  #carousel-navigation{
+    display:none;
+  }
+} */
+
+/* Ekrani ispod 600px - prvi upit i navigacione dugmadi */
+/* @media (max-width: 599999px) { UPDATE SPIRALA 3 -> SVE SIRINE */
+  /* .upit {
+    display: none;
+  }
+  
+  .upit:first-of-type {
+    display: flex;
+    flex-wrap: wrap;
+  } */
+  
+  #carousel-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+/* }

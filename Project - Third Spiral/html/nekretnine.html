@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="bs-BA">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nekretnine</title>
+    <link rel="stylesheet" type="text/css" href="../Style/nekretnine.css">
+</head>
+
+<body>
+    <iframe src="meni.html"></iframe>
+<!-- Search Criteria -->
+<div id="search-container" class="grid-container">
+    <label for="minCijena">Min Cijena:</label>
+    <input type="number" id="minCijena" name="minCijena">
+
+    <label for="maxCijena">Max Cijena:</label>
+    <input type="number" id="maxCijena" name="maxCijena">
+
+    <label for="minKvadratura">Min Kvadratura:</label>
+    <input type="number" id="minKvadratura" name="minKvadratura">
+
+    <label for="maxKvadratura">Max Kvadratura:</label>
+    <input type="number" id="maxKvadratura" name="maxKvadratura">
+
+    <button id="dugmePretraga">Pretraga</button>
+</div>
+
+<div id="divNekretnine">
+    <h1>Stan</h1>
+    <div class="grid-lista-nekretnina" id="stan">
+        <!-- .js generated -->
+    </div>
+    
+    <h1>Kuća</h1>
+    <div class="grid-lista-nekretnina" id="kuca">
+        <!-- .js generated -->
+    </div>
+    
+    <h1>Poslovni prostor</h1>
+    <div class="grid-lista-nekretnina" id="pp">
+        <!-- .js generated -->
+    </div>
+</div>
+<script src="../Scripts/MarketingAjax.js"></script>
+<script src="../Scripts/PoziviAjax.js"></script>
+<script src="../Scripts/SpisakNekretnina.js"></script>
+<script src="../Scripts/nekretnine.js"></script>
+</body>
+
+</html>

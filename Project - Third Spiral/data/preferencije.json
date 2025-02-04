@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "pretrage": 37,
+    "klikovi": 43
+  },
+  {
+    "id": 2,
+    "pretrage": 67,
+    "klikovi": 24
+  },
+  {
+    "id": 3,
+    "pretrage": 13,
+    "klikovi": 6
+  },
+  {
+    "id": 4,
+    "pretrage": 100,
+    "klikovi": 22
+  },
+  {
+    "id": 5,
+    "pretrage": 156,
+    "klikovi": 37
+  },
+  {
+    "id": 6,
+    "pretrage": 174,
+    "klikovi": 62
+  },
+  {
+    "id": 7,
+    "pretrage": 348,
+    "klikovi": 185
+  },
+  {
+    "id": 8,
+    "pretrage": 77,
+    "klikovi": 36
+  },
+  {
+    "id": 9,
+    "pretrage": 96,
+    "klikovi": 42
+  },
+  {
+    "id": 10,
+    "pretrage": 765,
+    "klikovi": 276
+  }
+]

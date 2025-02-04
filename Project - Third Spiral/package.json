@@ -1,0 +1,25 @@
+{
+  "name": "spirala",
+  "version": "1.0.0",
+  "description": "Spirala iz wta",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://dmujkic1@bitbucket.org/etfrma/wt24p19413.git"
+  },
+  "author": "Daris Mujkić",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/etfrma/wt24p19413/issues"
+  },
+  "homepage": "https://bitbucket.org/etfrma/wt24p19413#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "express-static": "^1.2.6"
+  }
+}

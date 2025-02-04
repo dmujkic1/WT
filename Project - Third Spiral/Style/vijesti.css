@@ -1,0 +1,130 @@
+body {
+    background-color: #fdf1d3;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+iframe {
+    border: none; 
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    align-content: center;
+}
+
+p{
+    text-align: justify;
+    font-weight:normal;
+    text-indent: 30px;
+}
+
+h2{
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolone na velikim ekranima */
+    gap: 0px;
+}
+
+.glavnaVijest img{
+    max-width: 100%;
+}
+
+.glavnaVijest {
+    grid-column: span 4;
+    aspect-ratio: 2 / 1; /* Odnos širine i visine 1:2 */
+    background-color: #c9daf8;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.visokaVijest {
+    grid-column: span 1;
+    grid-row: span 2;
+    background-color: #fff2cc;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.kvadratnaVijest {
+    grid-column: span 1;
+    aspect-ratio: 1 / 1;
+    background-color: #f4cccc;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+@media (max-width: 800px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Dvije kolone */
+    }
+
+    .glavnaVijest {
+        grid-column: span 2;
+        aspect-ratio: 1/1;
+    }
+
+    .container > div:nth-child(2) { /* visoka */
+        grid-column: 1;
+        grid-row: 2 / span 2;
+    }
+
+    .container > div:nth-of-type(3) { /* quad */
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .container > div:nth-of-type(4) { /* quad */
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .container > div:nth-child(5) { /* visoka */
+        grid-column: 2;
+        grid-row: 4 / span 2;
+    }
+
+    .container > div:nth-of-type(6) { /* quad */
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .container > div:nth-of-type(7) { /* quad */
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    .container > div:nth-of-type(8) { /* quad */
+        grid-column: 1;
+        grid-row: 6;
+    }
+
+    .container > div:nth-of-type(9) { /* quad */
+        grid-column: 2;
+        grid-row: 6;
+    }
+
+    .container > div:nth-child(10) { /* visoka */
+        grid-column: 1;
+        grid-row: 8 / span 2;
+        aspect-ratio: 1/2; /* ako stavim ovo u prva dva VISOKA, pojavi se gap izmedju njih i kvadratnih, pa ce samo u posljednja dva */
+        /* a bez ovoga visina te posljednje dvije VISOKE vijesti bude izuzetno mala */
+    }
+
+    .container > div:nth-child(11) { /* visoka */
+        grid-column: 2;
+        grid-row: 8 / span 2;
+        aspect-ratio: 1/2; /* ako stavim ovo u prva dva VISOKA, pojavi se gap izmedju njih i kvadratnih, pa ce samo u posljednja dva */
+        /* a bez ovoga visina te posljednje dvije VISOKE vijesti bude izuzetno mala */
+    }
+}
