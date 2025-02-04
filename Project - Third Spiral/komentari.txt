@@ -1,0 +1,61 @@
+Spirala1:
+1.)
+Pros: lahko čitljiv i uredan kod
+Cons: nedostatak slika tj. ikonica
+Belaji: n/a
+Dileme: n/a
+
+2.)
+Pros: minimalne izmjene koda za pretvorbu grida u flex
+Cons: n/a
+Belaji: n/a
+Dileme: n/a
+
+3.)
+Pros: zanimljiv i edukativan zadatak, a ne pretezak, naucio nas (koji nemamo pojma o css prije WT) da mozemo @media koristiti za razlicite prikaze
+Cons: n/a
+Belaji: uredio sam #osnovno img prvenstveno jer je slika ispadala iz okvira pri malim rezolucijama, sada to nije problem! (iako nije naglaseno u postavci spirale)
+Dileme: mnogo dilema izmedju sirine slike, stavio sam max-width:600px jer mi je cudno bilo kada bude 100%, pa odzumiram a slika i dalje ogromna.
+
+4.)
+Pros: zadatak rijesen seljackom metodom pojedinacnog postavljanja svakog elementa glavnog containera (s tim da sam morao poseban atribut dodati za posljednje dvije visoke vijesti, ali iskljucivo samo njima, saznato trial and error metodom)
+Cons: mnogo patnje i boli izazvano ovim zadatkom (procentualno najvise vremena oduzeo ubjedljivo)
+Belaji: finese oko aspect/ratio pravile problem, borderi nisu htjeli surađivati itd.
+Dileme: razmisljao sam da li da uredjujem zadatak naknadno van granica postavke spirale, ali sam se sjetio da se to ne trazi od nas a imam i druge predmete i projekte...Na vijesti.html na sirini ispod 410px otprilike odsjece se navbar postepeno (sve se vise krati kako se ekran suzava ispod 410px, ali ne normalno kao na ostalim stranicama)
+
+
+
+Spirala2:
+1.)
+Pros: dosta znanja stecenog oko listenera
+Cons: potroseno nerealno mnogo vremena umjesto da sam spremao ispite, mnogo mnogo mnogo vremena utroseno
+Belaji: prilikom resizeanja sirine da mi ne mijenja selektovani upit (<600px i dalje), pa funkcionalnost dugmadi za navigaciju da budu ispravni...
+Dileme: alternativni nacin zadatka kada carousel smjestam unutra diva upiti, a za to je dodan txt folder ali mislim da se bespotrebno komplikuje (nazalost sam zbog znatizelje uradio oboje)
+
+2.)
+Pros: filtriranje veoma precizno i koncizno napisano, lagano za koristiti, puno brze od prvog zadatka
+Cons: n/a
+Belaji: outlier i histogram fje malo zatrazile mozganja
+Dileme: nacini filtriranja u mojeNekretnine i outlier funkcijama su mi totalno nelogicne bile, ali sam ostavio po postavci spirale
+
+3.)
+Pros: dosta igranja ima oko sredjivanja, prepusteno slobodnoj volji sto je super
+Cons: n/a
+Belaji: n/a
+Dileme: mnoge hahahah
+
+
+
+Spirala 3:
+1.)
+Pros: zanimljivo poprilicno praviti rute i testirati u Postmanu
+Cons: n/a
+Belaji: n/a
+Dileme: n/a
+
+2.)
+Pros: zanimljivosti oko dodatnih funkcionalnosti
+Cons: nedovoljno jasno definisani zadaci, nepotpune upute onoga sto se zeli od nas
+Belaji: namjestanje upita unutar carousela (dinamickih popunjenih iz nekretnine.json) te ne-narusavanje fluidnosti listanja uz zadate zahtjeve
+Dileme: Da li ukloniti Detalji, Vijesti i Statistika iz menija... (sakrio sam samo "Detalji" jer se otvara klikom na dugme detalji iz nekretnina)
+POSEBAN KOMENTAR: U prilozenoj verziji MarketingAjax.js namecete nam da se sirina kliknute nekretnine prosiri na 500px, ne razumijem poentu toga ali ostavio sam.
