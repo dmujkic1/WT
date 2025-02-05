@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="bs-BA">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistika</title>
+    <link rel="stylesheet" type="text/css" href="../Style/statistika.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../Scripts/SpisakNekretnina.js" defer></script>
+    <script src="../Scripts/nekretnine.js" defer></script>
+    <script src="../Scripts/StatistikaNekretnina.js" defer></script>
+    <script src="../Scripts/statistika.js" defer></script>
+</head>
+
+<body>
+    <iframe src="meni.html"></iframe>
+
+    <div class="container">
+        <h1>Statistika nekretnina</h1>
+    
+        <!-- Sekcija za unos godina -->
+        <div id="year-ranges-section">
+          <h3>Raspon godina</h3>
+          <div class="range-input">
+            <input type="number" class="year-from" placeholder="Od">
+            <input type="number" class="year-to" placeholder="Do">
+            <button class="remove-range">Ukloni</button>
+          </div>
+          <button id="add-year-range">Dodaj raspon godina</button>
+        </div>
+    
+        <!-- Sekcija za unos cijena -->
+        <div id="price-ranges-section">
+          <h3>Raspon cijena</h3>
+          <div class="range-input">
+            <input type="number" class="price-from" placeholder="Od">
+            <input type="number" class="price-to" placeholder="Do">
+            <button class="remove-range">Ukloni</button>
+          </div>
+          <button id="add-price-range">Dodaj raspon cijena</button>
+        </div>
+    
+        <!-- Dugme za iscrtavanje histograma -->
+        <button id="draw-histogram">Iscrtaj histogram</button>
+
+        <!-- Canvas za prikaz histograma -->
+        <canvas id="myChart"></canvas>
+      </div>
+    
+      <div class="container-funkcija">
+        <!-- Forma za unos kriterija -->
+        <div id="filterForm">
+            <label for="tipNekretnine">Tip nekretnine:</label>
+            <select id="tipNekretnine">
+                <option value="">Odaberite tip</option>
+                <option value="Stan">Stan</option>
+                <option value="Kuća">Kuća</option>
+            </select>
+
+            <label for="minKvadratura">Min kvadratura:</label>
+            <input type="number" id="minKvadratura" placeholder="Min kvadratura">
+
+            <label for="maxKvadratura">Max kvadratura:</label>
+            <input type="number" id="maxKvadratura" placeholder="Max kvadratura">
+
+            <label for="tipGrijanja">Tip grijanja:</label>
+            <select id="tipGrijanja">
+                <option value="">Odaberite tip grijanja</option>
+                <option value="plin">Plin</option>
+                <option value="struja">Struja</option>
+            </select>
+
+            <label for="lokacija">Lokacija:</label>
+            <input type="text" id="lokacija" placeholder="Unesite lokaciju">
+
+            <label for="godinaIzgradnje">Godina izgradnje:</label>
+            <input type="number" id="godinaIzgradnje" placeholder="Godina izgradnje">
+
+            <label for="nazivSvojstva">Naziv svojstva:</label>
+            <select id="nazivSvojstva">
+                <option value="">Odaberite svojstvo</option>
+                <option value="kvadratura">Kvadratura</option>
+                <option value="cijena">Cijena</option>
+                <option value="godina_izgradnje">Godina izgradnje</option>
+            </select>
+
+            <button id="calculateAvgBtn">Izračunaj prosječnu kvadraturu</button>
+            <button id="calculateOutlierBtn">Pronađi outlier</button>
+
+            
+
+        </div>
+
+        <!-- Mjesto za prikaz rezultata -->
+        <div id="averageSquareResult">
+            <h3>Prosječna kvadratura: <span id="result"></span></h3>
+        </div>
+        <div id="outlierResult">
+            <h3>Najveći outlier:</h3>
+            <p id="outlierDetails">Nema podataka.</p>
+        </div>
+        <div id="moje-nekretnine-section">
+            <h3>Pronađi Moje Nekretnine</h3>
+            <label for="korisnik-id">ID Korisnika:</label>
+            <input type="number" id="korisnik-id" placeholder="Unesite ID korisnika" />
+            <button id="findMyProperties">Prikaži Moje Nekretnine</button>
+            <div id="propertiesTableContainer">
+                <table id="propertiesTable" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Naziv Nekretnine</th>
+                            <th>ID Nekretnine</th>
+                            <th>Broj Upita</th>
+                            <th>Datum Izgradnje</th>
+                            <th>Lokacija</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- naknadno dodani redovi -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+      </div>
+    
+    </body>
+</html>

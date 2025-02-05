@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "ime": "Neko",
+        "prezime": "Nekic",
+        "username": "username1",
+        "password": "$2b$10$OFykzLMWv.wpDk2dXT5C8ObIgy8tlZYbm0ZPN0VTe8I/jXosIX1EG"
+    },
+    {
+        "id": 2,
+        "ime": "Neko2",
+        "prezime": "Nekic2",
+        "username": "username2",
+        "password": "$2b$10$eN2a0Ii0mkjvpSUU.6.S4uASuULIlAspWFc2LkJTmIYPZszB8oyXC"
+    },
+    {
+        "id": 3,
+        "ime": "Neko3",
+        "prezime": "Nekic3",
+        "username": "test",
+        "password": "$2b$12$yk3OiGqVuX6d63EB/H6h2.LmKa/ZiMDp2UN8Os3ocyQCg94lEz0g6"
+    }
+]

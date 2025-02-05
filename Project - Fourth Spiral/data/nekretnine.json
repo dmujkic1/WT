@@ -1,0 +1,234 @@
+[
+  {
+    "id": 1,
+    "tip_nekretnine": "Stan",
+    "naziv": "Useljiv stan Sarajevo",
+    "kvadratura": 58,
+    "cijena": 232000,
+    "tip_grijanja": "plin",
+    "lokacija": "Novo Sarajevo",
+    "godina_izgradnje": 2019,
+    "datum_objave": "01.10.2023.",
+    "opis": "Sociis natoque penatibus.",
+    "upiti": [
+      {
+        "korisnik_id": 1,
+        "tekst_upita": "Nullam eu pede mollis pretium."
+      },
+      {
+        "korisnik_id": 2,
+        "tekst_upita": "Phasellus viverra nulla."
+      },
+      {
+        "korisnik_id": 3,
+        "tekst_upita": "Da li je nekretnina dostupna?(1)"
+      },
+      {
+        "korisnik_id": 3,
+        "tekst_upita": "Da li je nekretnina dostupna?(2)"
+      },
+      {
+        "korisnik_id": 3,
+        "tekst_upita": "Da li je nekretnina dostupna?(3)"
+      },
+      {
+        "korisnik_id": 3,
+        "tekst_upita": "Da li je nekretnina dostupna?(4)"
+      },
+      {
+        "korisnik_id": 3,
+        "tekst_upita": "Da li je nekretnina dostupna?(5)"
+      },
+      {
+        "korisnik_id": 3,
+        "tekst_upita": "Da li je nekretnina dostupna?(6)"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "tip_nekretnine": "Poslovni prostor",
+    "naziv": "Mali poslovni prostor",
+    "kvadratura": 29,
+    "cijena": 79000,
+    "tip_grijanja": "struja",
+    "lokacija": "Centar",
+    "godina_izgradnje": 2005,
+    "datum_objave": "20.02.2020.",
+    "opis": "Magnis dis parturient montes.",
+    "upiti": [
+      {
+        "korisnik_id": 2,
+        "tekst_upita": "Integer tincidunt."
+      },
+      {
+        "korisnik_id": 3,
+        "tekst_upita": "Da li je nekretnina dostupna?"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "tip_nekretnine": "Poslovni prostor",
+    "naziv": "Mali poslovni prostor",
+    "kvadratura": 83,
+    "cijena": 250000,
+    "tip_grijanja": "struja",
+    "lokacija": "Centar",
+    "godina_izgradnje": 2005,
+    "datum_objave": "20.08.2021.",
+    "opis": "Magnis dis parturient montes.",
+    "upiti": [
+      {
+        "korisnik_id": 2,
+        "tekst_upita": "Integer tincidunt."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "tip_nekretnine": "Poslovni prostor",
+    "naziv": "Mali poslovni prostor",
+    "kvadratura": 90,
+    "cijena": 235000,
+    "tip_grijanja": "struja",
+    "lokacija": "Centar",
+    "godina_izgradnje": 2005,
+    "datum_objave": "20.09.2024.",
+    "opis": "Magnis dis parturient montes.",
+    "upiti": [
+      {
+        "korisnik_id": 2,
+        "tekst_upita": "Integer tincidunt."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "tip_nekretnine": "Poslovni prostor",
+    "naziv": "Mali poslovni prostor",
+    "kvadratura": 55,
+    "cijena": 130000,
+    "tip_grijanja": "struja",
+    "lokacija": "Centar",
+    "godina_izgradnje": 2005,
+    "datum_objave": "20.12.2024.",
+    "opis": "Magnis dis parturient montes.",
+    "upiti": [
+      {
+        "korisnik_id": 2,
+        "tekst_upita": "Integer tincidunt."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "tip_nekretnine": "Poslovni prostor",
+    "naziv": "Mali poslovni prostor",
+    "kvadratura": 90,
+    "cijena": 330000,
+    "tip_grijanja": "struja",
+    "lokacija": "Centar",
+    "godina_izgradnje": 2005,
+    "datum_objave": "20.01.2023.",
+    "opis": "Magnis dis parturient montes.",
+    "upiti": [
+      {
+        "korisnik_id": 2,
+        "tekst_upita": "Integer tincidunt."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "tip_nekretnine": "Poslovni prostor",
+    "naziv": "Mali poslovni prostor",
+    "kvadratura": 25,
+    "cijena": 45000,
+    "tip_grijanja": "plin",
+    "lokacija": "Novo Sarajevo",
+    "godina_izgradnje": 2005,
+    "datum_objave": "20.06.2023.",
+    "opis": "Magnis dis parturient montes.",
+    "upiti": [
+      {
+        "korisnik_id": 2,
+        "tekst_upita": "Integer tincidunt."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "tip_nekretnine": "Poslovni prostor",
+    "naziv": "Mali poslovni prostor",
+    "kvadratura": 62,
+    "cijena": 260000,
+    "tip_grijanja": "struja",
+    "lokacija": "Centar",
+    "godina_izgradnje": 2005,
+    "datum_objave": "20.07.2023.",
+    "opis": "Magnis dis parturient montes.",
+    "upiti": [
+      {
+        "korisnik_id": 2,
+        "tekst_upita": "Integer tincidunt."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "tip_nekretnine": "Kuća",
+    "naziv": "Kuća sa okućnicom",
+    "kvadratura": 145,
+    "cijena": 410000,
+    "tip_grijanja": "plin",
+    "lokacija": "Novi Grad",
+    "godina_izgradnje": 2007,
+    "datum_objave": "07.01.2025.",
+    "opis": "Prelijepa trospratna kuća u mirnom naselju Azići.",
+    "upiti": [
+      {
+        "korisnik_id": 1,
+        "tekst_upita": "Koja je zadnja druže?"
+      },
+      {
+        "korisnik_id": 2,
+        "tekst_upita": "Skup si drug."
+      },
+      {
+        "korisnik_id": 3,
+        "tekst_upita": "Je li kapija na daljinski?"
+      },
+      {
+        "korisnik_id": 3,
+        "tekst_upita": "Koliko mjesta ima garaža?"
+      },
+      {
+        "korisnik_id": 3,
+        "tekst_upita": "Da li je komšiluk miran? Kod nas u Dojčlandu ima mnogo kriminal!"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "tip_nekretnine": "Kuća",
+    "naziv": "Luksuzna vikendica",
+    "kvadratura": 107,
+    "cijena": 520000,
+    "tip_grijanja": "plin",
+    "lokacija": "Novi Grad",
+    "godina_izgradnje": 2012,
+    "datum_objave": "08.01.2025.",
+    "opis": "Prelijepa vikendica sa bazenom u Ahatovićima.",
+    "upiti": [
+      {
+        "korisnik_id": 1,
+        "tekst_upita": "300000 i dolazim sutra po nju?"
+      },
+      {
+        "korisnik_id": 2,
+        "tekst_upita": "Hoće li ostati bilijarski stol pored bazena?"
+      }
+    ]
+  }
+]
